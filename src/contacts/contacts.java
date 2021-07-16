@@ -5,11 +5,11 @@ import java.nio.file.Paths;
 
 public class contacts {
 
-    // Try to create the directory
-    Path path = getPath.getPath("src", "fileIO", "files");
+    // creates a variable that create a directory
+    Path path = getPath.getPath("src", "contacts", "Contact List");
         getPath.createDirectory.createDirectory2(path);
 
-    // Try to create the file
-    path = Paths.get(path.toString(), "test.txt");
+    // creates variable that creates a file
+    path = Paths.get(path.toString(), "testfile.txt");
         getPath.createFile(path);
 }

@@ -10,7 +10,30 @@ import java.util.List;
 
 public class ContactsUtils {
 
+    //fields
+    String contactname;
+    int phonenumber;
 
+    //constructor
+    public String getContactname() {
+        return contactname;
+    }
 
+    //getters and setters
+    public void setContactname(String contactname) {
+        this.contactname = contactname;
+    }
 
+    public int getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(int phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public ContactsUtils(String contactname, int phonenumber) {
+        this.contactname = contactname;
+        this.phonenumber = phonenumber;
+    }
 }

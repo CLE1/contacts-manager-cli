@@ -21,12 +21,11 @@ public class createDirectory {
                 e.printStackTrace();
             }
 
+        }else{
+                System.out.println("The file at: " + path.toAbsolutePath() + " already exists");
+
+            }
         }
-    }
-    public static boolean verifyPath(Path path) {
-
-        return Files.exists(path);
 
     }
-}
 

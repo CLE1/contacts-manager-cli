@@ -6,13 +6,13 @@ import java.nio.file.Path;
 
 public class createFile {
 
-    public static void createFile2(Path pathToCreate) {
+    public static void createFile2(Path path) {
 
-        if (verifyPath(path)) {
+        if (verifyPath.verifyPath(path)) {
 
 
             try {
-                Files.createFile(pathToCreate);
+                Files.createFile(path);
 
             } catch (IOException e) {
 

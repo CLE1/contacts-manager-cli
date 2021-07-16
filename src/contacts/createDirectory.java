@@ -9,7 +9,7 @@ public class createDirectory {
 
     public static void createDirectory2(Path pathToCreate) {
 
-        if (verifyPath.verifyPath(pathToCreate)) {
+        if (verifyPath.verifyPathogens(pathToCreate)) {
 
 
             try {

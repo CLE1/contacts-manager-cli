@@ -8,7 +8,7 @@ public class createFile {
 
     public static void createFile2(Path path) {
 
-        if (verifyPath.verifyPath(path)) {
+        if (verifyPath.verifyPathogens(path)) {
 
 
             try {

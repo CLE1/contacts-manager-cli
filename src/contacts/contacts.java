@@ -6,10 +6,10 @@ import java.nio.file.Paths;
 public class contacts {
 
     // Try to create the directory
-    Path path = FileDirectoryUtil.getPath("src", "fileIO", "files");
-        FileDirectoryUtil.tryCreateDirectory(path);
+    Path path = getPath.getPath("src", "fileIO", "files");
+        getPath.createDirectory.createDirectory2(path);
 
     // Try to create the file
     path = Paths.get(path.toString(), "test.txt");
-        FileDirectoryUtil.tryCreateFile(path);
+        getPath.createFile(path);
 }

@@ -14,16 +14,6 @@ public class write2File {
     public write2File(String wholename, String digits) {
     }
 
-
-//adding first and last name
-//        String digits = ;
-//        List<String> content = new ArrayList<>();
-//        String contents = name + " : " + num;
-//        content.add(contents);
-
-//        contacts.
-
-
     public static void writingToFiles(String wholename, String digits) {
 //    method to write to contacts text file
         List<String> content = new ArrayList<>();

@@ -11,10 +11,7 @@ public class readContacts {
     public static List<String> readFromContactsTxt(Path path) throws IOException {
         return Files.readAllLines(path);
 
-
     }
-
-
 
 
 }

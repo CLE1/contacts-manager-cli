@@ -5,19 +5,24 @@ import java.nio.file.Paths;
 
 public class getPath {
 
-    public static Path getPath(String fileName) {
+
+    public static Path getPathto(String fileName) {
+        verifyPath.verifyPathogens();
         return Paths.get(fileName);
 
     }
-
-    public static Path getPath(String childDirectory, String fileName) {
+    public static Path getPathto(String childDirectory, String fileName) {
+        verifyPath.verifyPathogens();
         return Paths.get(childDirectory, fileName);
 
     }
 
-    public static Path getPath(String parentDirectory, String childDirectory, String fileName) {
+    public static Path getPathto(String parentDirectory, String childDirectory, String fileName) {
+        verifyPath.verifyPathogens();
         return Paths.get(parentDirectory, childDirectory, fileName);
 
     }
+
+
 
 }

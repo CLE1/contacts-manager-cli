@@ -1,20 +1,19 @@
 package contacts;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 public class ContactsUtils {
 
     //fields
     String contactname;
-    int phonenumber;
+    String phonenumber;
 
     //constructor
+    public ContactsUtils(String contactname, String phonenumber) {
+        this.contactname = contactname;
+        this.phonenumber = phonenumber;
+    }
+
     public String getContactname() {
         return contactname;
     }
@@ -24,16 +23,12 @@ public class ContactsUtils {
         this.contactname = contactname;
     }
 
-    public int getPhonenumber() {
+    public String getPhonenumber() {
         return phonenumber;
     }
 
-    public void setPhonenumber(int phonenumber) {
+    public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
 
-    public ContactsUtils(String contactname, int phonenumber) {
-        this.contactname = contactname;
-        this.phonenumber = phonenumber;
-    }
 }

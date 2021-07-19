@@ -23,7 +23,6 @@ public class selectOption {
                 break;
             case 4:
                 deleteName.Delete();
-                System.out.println("Case 2");
                 break;
             case 5:
                 System.out.println("You are not worthy!");

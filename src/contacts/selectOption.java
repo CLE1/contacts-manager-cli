@@ -22,7 +22,7 @@ public class selectOption {
                 searchName.searchByName();
                 break;
             case 4:
-//
+                deleteName.Delete();
                 System.out.println("Case 2");
                 break;
             case 5:

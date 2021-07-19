@@ -1,55 +1,46 @@
 package contacts;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class deleteName {
-    public static void whatIsThis() throws IOException {
-        // PrintWriter object for output.txt
-        PrintWriter pw = new PrintWriter("output.txt");
+    public static boolean Delete(){
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Which contact do you want to delete?");
+            String userInput = scanner.nextLine();
 
-        // BufferedReader object for input.txt
-        BufferedReader br1 = new BufferedReader(new FileReader("input.txt"));
+            List<String> lines = Files.readAllLines(Paths.get("src", "contacts", "test.txt"));
+            List<String> newList = new ArrayList<>();
 
-        String line1 = br1.readLine();
-
-        // loop for each line of input.txt
-        while (line1 != null) {
-            boolean flag = false;
-
-            // BufferedReader object for delete.txt
-            BufferedReader br2 = new BufferedReader(new FileReader("delete.txt"));
-
-            String line2 = br2.readLine();
-
-            // loop for each line of delete.txt
-            while (line2 != null) {
-                if (line1.equals(line2)) {
-                    flag = true;
+            for (String line : lines) {
+                if (line.contains(userInput)) {
+                    newList.remove(userInput);
                     break;
+                } else if (line.isEmpty()) {
+                    System.out.println("invalid input");
+                    Delete();
                 }
-
-                line2 = br2.readLine();
-            }
-
-            // if flag = false
-            // write line of input.txt to output.txt
-            if (!flag)
-                pw.println(line1);
-
-            line1 = br1.readLine();
+                newList.add(line);
+                Files.write(Paths.get("src", "contacts", "test.txt"), newList);
+                // Using .remove(index: ) will remove the contact place on the original list
+                // Ex. if you put 'index:5' you'll remove the contact on line 5.
 
         }
 
-        pw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        // closing resources
-        br1.close();
-        pw.close();
 
-        System.out.println("File operation performed successfully");
+        return false;
+
     }
 }
+
+
 

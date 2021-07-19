@@ -1,10 +1,11 @@
 package contacts;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class selectOption {
-    public static void pickOne(int option){
+    public static void pickOne()  {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -12,27 +13,23 @@ public class selectOption {
 
         switch (input) {
             case 1:
-                getContent.toGetContent();
-                System.out.println("Case 1");
-                // Fall through!
+                getContent.pathstoGetContent();
+                break;
             case 2:
-//                write2File.writingToFiles();
-                System.out.println("Case 2");
+               soYouWantToadd.toAdd();
                 break;
             case 3:
-
-                System.out.println("Case 1");
-                // Fall through!
+                searchName.searchByName();
+                break;
             case 4:
 //
                 System.out.println("Case 2");
                 break;
             case 5:
-//
-                System.out.println("Case 2");
+                System.out.println("You are not worthy!");
                 break;
             default:
-                System.out.println("Default case");
+                System.out.println("So you think you're slick huh");
                 break;
         }
 

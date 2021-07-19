@@ -1,17 +1,31 @@
 package contacts;
 
-import java.util.ArrayList;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.Objects;
 
 public class getContent {
 
-    //method to get contacts {point at contacts txt file}
-    public static List<String> toGetContent() {
-        List<String> contentToWrite = new ArrayList<>();
-        contentToWrite.add("This is a new line!");
-        contentToWrite.add("ANOTHER LINE");
-        contentToWrite.add("ANOTHER NOTHER LINE!!!!");
+//    method to view contacts
+    public static void pathstoGetContent() {
+        try {
+            //need to fix
+//            contacts.method4getContacts();
 
-        return contentToWrite;
+            Path filePath = Paths.get("src", "contacts", "test.txt");
+            List<String> file = Files.readAllLines(contacts.method4getContacts());
+            for (String s : file) {
+                System.out.println(s);
+            }
+
+        } catch (IOException e) {
+            System.out.println("Error with toGetContent");
+            e.printStackTrace();
+        }
     }
 }
+

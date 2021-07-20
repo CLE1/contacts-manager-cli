@@ -1,18 +1,17 @@
 package contacts;
-
 public class addHyphens {
+    private static String fixNumber (String digits){
 
-    private static String fixNumber (String Number){
-        String trimNumber = Number.trim();
-        String formatNumber = "";
-        if (trimNumber.length() == 7) {
-            formatNumber = trimNumber.substring(0, 3) + "-" + trimNumber.substring(3, 7);
+        String needDashes;
+        if (digits.length() == 3) {
+            needDashes = digits.substring(0, 3) + "-" + digits.substring(3, 7);
         } else {
-            formatNumber = trimNumber.substring(0, 3) + "-" + trimNumber.substring(3, 6) + "-"
-                    + trimNumber.substring(6);
+            needDashes = digits.substring(0, 3) + "-" + digits.substring(3, 6) + "-"
+                    + digits.substring(6);
         }
-        System.out.println(formatNumber);
-        return formatNumber;
-    }
+        System.out.println("this is with dashes: " + needDashes);
 
+        System.out.println(digits);
+        return digits;
+    }
 }

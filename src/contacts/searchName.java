@@ -9,7 +9,7 @@ public class searchName {
 //    private static File filePath;
     private static Path filePath = Paths.get("src", "contacts", "test.txt");
 
-    private static File file = new File("src","contatcs");
+    private static File file = new File("src","contacts");
     private static BufferedReader reader;
     private static Writer out;
     public static boolean searchByName(){

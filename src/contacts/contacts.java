@@ -12,6 +12,7 @@ public class contacts {
 //path for file
     public static Path method4getContacts() {
         return getPath.getPathto("src", "contacts", "test.txt");
+//        verifyPath.verifyPathogens();
     }
 
 

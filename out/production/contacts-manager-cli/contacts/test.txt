@@ -1,6 +1,5 @@
 Name | Phone Number
 ___________________
-Jack Black | (123)123-12341
-Jane Doe | (234)234-2345
-Sam Space | (345)345-3456
-
+Jack Black | 123-123-12341 |
+Jane Doe | 234-234-2345 |
+Sam Space | 345-345-3456 |

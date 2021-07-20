@@ -17,18 +17,18 @@ public class soYouWantToadd {
         String wholename = first + " " + last;
         System.out.println("Can I get yo numba?");
         String digits = wizardHat.next();
-        addHyphens
+
         //new code
 
-//        String trimNumber = digits.trim();
-//        String formatNumber = "";
-//        if (trimNumber.length() == 7) {
-//            formatNumber = trimNumber.substring(0, 3) + "-" + trimNumber.substring(3, 7);
-//        } else {
-//            formatNumber = trimNumber.substring(0, 3) + "-" + trimNumber.substring(3, 6) + "-"
-//                    + trimNumber.substring(6);
-//        }
-//        System.out.println("this is formatted: " + formatNumber);
+        String trimNumber = digits.trim();
+        String formatNumber = "";
+        if (trimNumber.length() == 7) {
+            formatNumber = trimNumber.substring(0, 3) + "-" + trimNumber.substring(3, 7);
+        } else {
+            formatNumber = trimNumber.substring(0, 3) + "-" + trimNumber.substring(3, 6) + "-"
+                    + trimNumber.substring(6);
+        }
+        System.out.println("this is formatted: " + formatNumber);
 //    }
 
 

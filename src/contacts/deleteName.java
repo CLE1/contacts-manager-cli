@@ -27,8 +27,7 @@ public class deleteName {
                 }
                 newList.add(line);
                 Files.write(Paths.get("src", "contacts", "test.txt"), newList);
-                // Using .remove(index: ) will remove the contact place on the original list
-                // Ex. if you put 'index:5' you'll remove the contact on line 5.
+
 
         }
 

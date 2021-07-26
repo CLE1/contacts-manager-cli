@@ -7,9 +7,11 @@ import java.util.List;
 
 public class readContacts {
 
-    //method to get all entry from contacts text fiel
+    //method to get all entry from contacts text field
     public static List<String> readFromContactsTxt(Path path) throws IOException {
         return Files.readAllLines(path);
+
     }
+
 
 }

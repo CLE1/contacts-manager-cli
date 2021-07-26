@@ -9,7 +9,7 @@ public class createDirectory {
 
     public static void createDirectory2(Path pathToCreate) {
 
-        if (verifyPath(path)) {
+        if (verifyPath.verifyPathogens(pathToCreate)) {
 
 
             try {
@@ -19,14 +19,12 @@ public class createDirectory {
 
                 System.out.println("Yo what it do?");
                 e.printStackTrace();
+
             }
-
+        }else{
+            System.out.println("The file at: " + pathToCreate.toAbsolutePath() + " already exists");
+            }
         }
-    }
-    public static boolean verifyPath(Path path) {
-
-        return Files.exists(path);
 
     }
-}
 

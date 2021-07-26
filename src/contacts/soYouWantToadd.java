@@ -20,17 +20,12 @@ public class soYouWantToadd {
         System.out.println("Can I get yo numba?");
         String digits = wizardHat.next();
 
-        //new code
-
         //need to fix then add
-//        addHyphens
+//addHyphens
 
-        if (digits.length() == 3) {
-            needDashes = digits.substring(0, 3) + "-" + digits.substring(3, 7);
-        } else {
-            needDashes = digits.substring(0, 3) + "-" + digits.substring(3, 6) + "-"
+        needDashes = digits.substring(0, 3) + "-" + digits.substring(3, 7) + "-"
                     + digits.substring(6);
-        }
+
         System.out.println("this is with dashes: " + needDashes);
 //    }
 
@@ -41,7 +36,7 @@ public class soYouWantToadd {
 
 //        System.out.printf("You're a wizard %s!", first.substring(0,1).toUpperCase() + str.substring(1);
 //        System. out.println(output););
-        writingToFiles(wholename, formatNumber);
+        writingToFiles(wholename, digits);
 
     }
 }
